@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
-import './styles.css';
-import AddItem from './pages/AddItem';
-import Search from './pages/Search';
-import Shoes from './pages/Shoes';
-import Welcome from './pages/Welcome';
+import React from "react";
+import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import "./styles.css";
+import AddItem from "./pages/AddItem";
+import Search from "./pages/Search";
+import Shoes from "./pages/Shoes";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return (

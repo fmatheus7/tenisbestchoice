@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import firebase from './utils/Firebase';
+import React, { useState } from "react";
+import firebase from "./utils/Firebase";
 
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
-    States
-    nst[shoes, setShoes] = useState([{}]);
-    // Hdle Functions
-    cons  ndleChange = (e) => {
-        consname, value
-    } = e.target;
-    setShoes    ate) => ({
-        ...prevState,
-        ame]: value
-        onsole.log(shoes);;
+    // States
+    const [shoes, setShoes] = useState([{}]);
+    // Handle Functions
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setShoes((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }));
+        console.log(shoes);
+    };
 
-        onSubmit(e) {
-            e.pventfault();
+    function onSubmit(e) {
+        e.preventDefault();
 
-            firebase
-            estore()
-                .collectioenis')
-            hoes
-        })
-     (() => {
-            setShoes('');
-            ;
-        }
+        firebase
+            .firestore()
+            .collection("Tenis")
+            .add({ shoes })
+            .then(() => {
+                setShoes("");
+            });
+    }
 
-  return xt.Provider vaandleChange, onSubmit
-}}>
-    hild  
-  </Context.P    
-  );
+    return (
+      <Context.Provider value={{ handleChange, onSubmit }}>
+        {children}
+      </Context.Provider>
+    );
 }
 
 export { ContextProvider, Context };

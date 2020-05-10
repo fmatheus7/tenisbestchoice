@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import Input from '../components/Input';
-import { Context } from '../Context';
+import React, { useContext } from "react";
+import Input from "../components/Input";
+import { Context } from "../Context";
 
 export default function AddItem() {
   const { onSubmit } = useContext(Context);
 
   return (
     <div>
-      <h1>'Admin' page to add the shoes to the DB</h1>
+      <h1>Admin page to add the shoes to the DB</h1>
       <h3>Shoes info</h3>
       <form onSubmit={onSubmit}>
         <Input
@@ -38,9 +38,3 @@ export default function AddItem() {
     </div>
   );
 }
-
-// [13:03, 04/05/2020] Paulo: Amortecimento: Leve, Macio, Extra Macio
-// Dropp: pode ser entre 4, 6,8,10,12 (milímetros)
-// [13:03, 04/05/2020] Paulo: *drop
-// [13:04, 04/05/2020] Paulo: Peso (gramas)
-// [13:05, 04/05/2020] Paulo: Tipo de treino: rodagem , tiro / competição
