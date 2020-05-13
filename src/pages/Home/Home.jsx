@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "../components/Card/Index";
-import Input from "../components/Input";
+import Card from "../../components/Card/Index";
+import Input from "../../components/Input";
+import "./styles.css"
 
 export default function Welcome({ name }) {
     const imgurl = "https://www.bigstockphoto.com/images/homepage/module-6.jpg";
@@ -14,9 +15,10 @@ export default function Welcome({ name }) {
           <Card name="teste3 " text="Teste 13" url={imgurl} />
         </div>
         <div className="subscription">
+          <h2>Começe agora a ultilizar nossos serviços!</h2>
           <form>
             <Input type="text" placeholder="Digite seu e-mail" name="email" />
-            <button type="submit">Enviar</button>
+            <button type="submit">Registrar</button>
           </form>
         </div>
       </div>

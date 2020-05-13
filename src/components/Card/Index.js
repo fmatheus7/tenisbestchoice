@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css"
 
 export default function Card({ url, name, text }) {
     const image = { backgroundImage: `url(${url})` };

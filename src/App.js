@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/Header/Index";
 import "./styles.css";
-import AddItem from "./pages/AddItem";
+import Admin from './pages/Admin/Admin'
 import Search from "./pages/Search";
 import Shoes from "./pages/Shoes";
-import Welcome from "./pages/Welcome";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -14,19 +14,18 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Welcome name="Matheus" />
+          <Home name="Matheus" />
         </Route>
         <Route path="/shoes">
           <Shoes />
         </Route>
         <Route path="/AddItem">
-          <AddItem />
+          <Admin />
         </Route>
         <Route path="/search">
           <Search />
         </Route>
       </Switch>
-      <h1>Hello World!</h1>
     </div>
   );
 }
