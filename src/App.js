@@ -4,8 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Index";
 import "./styles.css";
 import Admin from './pages/Admin/Admin'
-import Search from "./pages/Search";
-import Shoes from "./pages/Shoes";
+import Search from "./pages/Search/Index";
+import Shoes from "./pages/Shoes/Index"
 import Home from "./pages/Home/Home";
 
 function App() {

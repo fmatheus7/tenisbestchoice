@@ -10,6 +10,8 @@ export default function Header() {
       </Link>
      
       <i className="fas fa-running" />
+      <i className="fas fa-database" />
+
     </header>
   );
 }

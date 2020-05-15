@@ -13,20 +13,22 @@ export default function Input({
   max,
   name,
 }) {
-  const { handleChange } = useContext(Context);
+  const { handleChange, handleSearchChange} = useContext(Context);
 
-  return (
-    <input
-      type={type}
-      alt={alt}
-      check={checked}
-      maxLength={maxlength}
-      placeholder={placeholder}
-      value={value}
-      min={min}
-      max={max}
-      name={name}
-      onChange={handleChange}
-    />
-  );
+ return (
+   <input
+     type={type}
+     alt={alt}
+     check={checked}
+     maxLength={maxlength}
+     placeholder={placeholder}
+     value={value}
+     min={min}
+     max={max}
+     name={name}
+     onChange={handleChange}
+     required
+   />
+  )
+  ;
 }

@@ -5,7 +5,13 @@ const Context = React.createContext();
 
 function ContextProvider({ children }) {
     // States
-    const [shoes, setShoes] = useState([{}]);
+    const [shoes, setShoes] = useState([]);
+    const [searchShoe, setSearchShoe] = useState([]);
+    const [submitedShoe, setSubmitedShoe] = useState([]);
+   
+    //
+
+
     // Handle Functions
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -13,23 +19,44 @@ function ContextProvider({ children }) {
             ...prevState,
             [name]: value,
         }));
-        console.log(shoes);
     };
 
-    function onSubmit(e) {
-        e.preventDefault();
+    const handleSearchChange = (e) => {
+        const { name, value } = e.target;
+        setSearchShoe((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }))
+        console.log(searchShoe);
+    };
 
-        firebase
+
+    function onSubmit(e) {  // add items to the DB (admin)
+        e.preventDefault();
+            firebase
             .firestore()
-            .collection("Tenis")
+            .collection('Tenis')
             .add({ shoes })
             .then(() => {
-                setShoes("");
+                setShoes([]);
             });
     }
 
+    function searchSubmit(e) { // Add the user search item to the DB
+        e.preventDefault();
+        firebase
+            .firestore()
+            .collection('Search')
+            .add({ searchShoe })
+            .then(() => {
+                setShoes([]);
+            });
+    }
+
+
+    // 
     return (
-      <Context.Provider value={{ handleChange, onSubmit }}>
+      <Context.Provider value={{ handleChange, onSubmit, searchSubmit, handleSearchChange }}>
         {children}
       </Context.Provider>
     );
