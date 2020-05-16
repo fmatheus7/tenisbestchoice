@@ -3,11 +3,11 @@ import Card from "../../components/Card/Index";
 import Input from "../../components/Input";
 import "./styles.css"
 import { Context } from "../../Context";
-
+import { Link } from "react-router-dom"
 
 export default function Welcome({ name }) {
     const imgurl = "https://www.bigstockphoto.com/images/homepage/module-6.jpg";
-    const {onSubmit, handleChange} = useContext(Context)
+    const {onSubmit, onEmailChange} = useContext(Context)
 
     return (
       <div className="title">
@@ -20,9 +20,13 @@ export default function Welcome({ name }) {
         <div className="subscription">
           <h2>Começe agora a ultilizar nossos serviços!</h2>
           <form onSubmit={onSubmit}>
-            <Input type="text" placeholder="Digite seu e-mail" name="email" onChange={handleChange} />
-            <button type="submit">Registrar</button>
+            <input type="text" placeholder="Digite seu e-mail" name="email" onChange={onEmailChange} />
+            <Link to="Search">
+              <button type="submit">Registrar</button>
+            </Link>
           </form>
+
+          
         </div>
       </div>
     );

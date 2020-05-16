@@ -8,9 +8,10 @@ export default function Header() {
       <Link to="/">
         <h1>Tenis best Choice</h1>
       </Link>
-     
       <i className="fas fa-running" />
-      <i className="fas fa-database" />
+      <Link to="/AddItem">
+        <i className="fas fa-database" />
+      </Link>
 
     </header>
   );

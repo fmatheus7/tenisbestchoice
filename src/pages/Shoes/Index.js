@@ -21,30 +21,18 @@ export default function Shoes() {
 
   }, [])
 
+  const shoeList = tenis.map(shoe => {
+    return (
+      <ul>
+        <li>{shoe.values.shoe}</li>
+      </ul>
+    )
+  })
+
   return (
     <div className="Shoes-Container">
-      {tenis.map(item => (
-        <ul key={item.shoes.name}>
-          {item.shoes.name}
-          <li>
-            {item.shoes.treino}
-            Tipo de treino
-            {' '}
-          </li>
-          <li>
-            {item.shoes.amortecimento}
-            amortecimento
-          </li>
-          <li>
-            {item.shoes.drop}
-            drop
-          </li>
-          <li>
-            {item.shoes.peso}
-            peso
-          </li>
-        </ul>
-       ))}
+      {shoeList}
     </div>
+
   );
 }

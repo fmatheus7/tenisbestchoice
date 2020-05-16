@@ -33,3 +33,15 @@ input[type=submit] {
     text-align: center;
     align-self: center;
 }
+
+select {
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+}

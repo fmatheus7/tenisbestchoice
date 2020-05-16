@@ -8,7 +8,7 @@ function ContextProvider({ children }) {
     const [shoes, setShoes] = useState([]);
     const [searchShoe, setSearchShoe] = useState([]);
     const [submitedShoe, setSubmitedShoe] = useState([]);
-   
+    const [emailClient, setEmailClient] = useState('');
     //
 
 
@@ -21,6 +21,15 @@ function ContextProvider({ children }) {
         }));
     };
 
+    // Handle Email Value
+
+    function onEmailChange(e) {
+        const {name, value} = e.target;
+
+        setEmailClient({...emailClient, [name]: value});
+        console.log(emailClient)
+    }
+
     const handleSearchChange = (e) => {
         const { name, value } = e.target;
         setSearchShoe((prevState) => ({
@@ -29,7 +38,6 @@ function ContextProvider({ children }) {
         }))
         console.log(searchShoe);
     };
-
 
     function onSubmit(e) {  // add items to the DB (admin)
         e.preventDefault();
@@ -56,7 +64,7 @@ function ContextProvider({ children }) {
 
     // 
     return (
-      <Context.Provider value={{ handleChange, onSubmit, searchSubmit, handleSearchChange }}>
+      <Context.Provider value={{ handleChange, onSubmit, searchSubmit, handleSearchChange, onEmailChange }}>
         {children}
       </Context.Provider>
     );

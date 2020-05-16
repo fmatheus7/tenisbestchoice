@@ -47,6 +47,7 @@ export default function Search() {
             <option value="tiro">Tiro</option>
             <option value="competicao">Competição</option>
           </select>
+          <input type="email" required size="30" />
           <br />
           <button type="submit" value="submit">Pesquisar</button>
           

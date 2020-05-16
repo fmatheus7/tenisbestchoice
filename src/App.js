@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header/Index";
 import "./styles.css";
 import Admin from './pages/Admin/Admin'
