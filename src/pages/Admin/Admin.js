@@ -3,26 +3,20 @@ import firebase from "../../utils/Firebase"
 import "./styles.css"
 
 export default function Admin() {
-  
-  const initalValue = [{
-    shoe: '',
-    drop: 0,
-    weight: '',
-    damping: '',
-    training: '',
-    addedby: ''
-  }]
 
-  const [values, setValues] = useState(initalValue);
+  const [values, setValues] = useState({});
 
   function onSubmit(e) {  // add items to the DB (admin)
     e.preventDefault();
+    if (!values.shoe || !values.drop || !values.weight || !values.damping || !values.training || !values.addedby){ 
+      alert("você precisa selecionar todas opções")
+    } else 
         firebase
         .firestore()
-        .collection('Tenis')
+        .collection('Tenis') 
         .add({ values })
         .then(() => {
-            setValues(initalValue);
+            setValues({});
         });
 }
 
@@ -37,9 +31,10 @@ export default function Admin() {
       <h1>Admin page to add the shoes to the DB</h1>
       <h3>Shoes info</h3>
       <form onSubmit={onSubmit} className="Admin-container">
+        
         <input type="text" minLength="1" maxLength="25" placeholder="Nome do Tenis" name="shoe" onChange={onChange} id="shoe" required />
         
-        <select onChange={onChange} name="drop">
+        <select onChange={onChange} name="drop" required>
           <option value="4">4 Milímetros</option>
           <option value="6">6 Milímetros</option>
           <option value="8">8 Milímetros</option>
@@ -47,19 +42,19 @@ export default function Admin() {
           <option value="12">12 MMilímetros</option>
         </select>
 
-        <select onChange={onChange} name="weight">
+        <select onChange={onChange} name="weight" required>
           <option value="leve">Leve</option>
           <option value="medio">Médio</option>
           <option value="pesado">Pesado</option>
         </select>
        
-        <select onChange={onChange} name="damping">
+        <select onChange={onChange} name="damping" required>
           <option value="leve">Leve</option>
           <option value="macio">Macio</option>
           <option value="extramacio">Extra Macio</option>
         </select>
 
-        <select onChange={onChange} name="training">
+        <select onChange={onChange} name="training" >
           <option value="running">Corrida</option>
           <option value="rodagem">Rodagem</option>
           <option value="competição">Competição</option>
@@ -73,6 +68,7 @@ export default function Admin() {
 
         <button type="submit">Adicionar ao banco de dados</button>
       </form>
+        <button onClick={() => console.log(values)}>Log this  </button> 
     </div>
     
   );

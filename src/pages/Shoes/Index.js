@@ -24,7 +24,7 @@ export default function Shoes() {
   const shoeList = tenis.map(shoe => {
     return (
       <ul>
-        <li>{shoe.values.shoe}</li>
+        <li>{shoe?.values.shoe}</li>
       </ul>
     )
   })

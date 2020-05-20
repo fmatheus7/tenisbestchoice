@@ -64,7 +64,7 @@ function ContextProvider({ children }) {
 
     // 
     return (
-      <Context.Provider value={{ handleChange, onSubmit, searchSubmit, handleSearchChange, onEmailChange }}>
+      <Context.Provider value={{ handleChange, onSubmit, searchSubmit, handleSearchChange, onEmailChange, setSubmitedShoe, submitedShoe }}>
         {children}
       </Context.Provider>
     );
