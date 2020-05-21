@@ -61,7 +61,8 @@ function ContextProvider({ children }) {
             });
     }
 
-
+    // 
+  
     // 
     return (
       <Context.Provider value={{ handleChange, onSubmit, searchSubmit, handleSearchChange, onEmailChange, setSubmitedShoe, submitedShoe }}>

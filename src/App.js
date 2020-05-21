@@ -7,6 +7,7 @@ import Admin from './pages/Admin/Admin'
 import Search from "./pages/Search/Index";
 import Shoes from "./pages/Shoes/Index"
 import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Index";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/search">
           <Search />
+        </Route>
+        <Route path="/UserLogin">
+          <Login />
         </Route>
       </Switch>
     </div>
