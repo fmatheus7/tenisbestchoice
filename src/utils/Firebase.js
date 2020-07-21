@@ -2,14 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const config = {
-  apiKey: 'AIzaSyA-RpzOoKuIex1-JK2Mda3aX6NDOntz6oI',
-  authDomain: 'high-age-233414.firebaseapp.com',
-  databaseURL: 'https://high-age-233414.firebaseio.com',
-  projectId: 'high-age-233414',
-  storageBucket: 'high-age-233414.appspot.com',
-  messagingSenderId: '122990979022',
-  appId: '1:122990979022:web:c107c97091f46a8f64ad9f',
-  measurementId: 'G-MHD2NCYCBW'
+  apiKey: "AIzaSyALVhksC5gWbXlbCh-G_x0biWQxuBBn30g",
+  authDomain: "tenisdb-63790.firebaseapp.com",
+  databaseURL: "https://tenisdb-63790.firebaseio.com",
+  projectId: "tenisdb-63790",
+  storageBucket: "tenisdb-63790.appspot.com",
+  messagingSenderId: "661066111790",
+  appId: "1:661066111790:web:6aed04acaffcad5ca3f8bf"
 };
 
 firebase.initializeApp(config);
