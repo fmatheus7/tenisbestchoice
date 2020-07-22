@@ -9,7 +9,7 @@ export default function Shoes() {
   useEffect(() => {
     const fetchData = async () => {
       const db = Firebase.firestore();
-      db.collection('Tenis')
+      db.collection('Shoes')
         .get()
         .then((querySnapshot) => {
           const data = querySnapshot.docs.map((doc) => doc.data());
@@ -22,8 +22,15 @@ export default function Shoes() {
 
   const shoeList = tenis.map((shoe) => {
     return (
-      <ul>
-        <li>{shoe?.values.shoe}</li>
+      <ul className="Shoe-list">
+        <li>
+          <img src={shoe?.values.imgUrl} alt="shoe-img" />
+        </li>
+        <li>{shoe?.values.name}</li>
+        <li>{shoe?.values.drop}</li>
+        <li>{shoe?.values.damping}</li>
+        <li>{shoe?.values.traning}</li>
+        <li>{shoe?.values.weight}</li>
       </ul>
     );
   });
