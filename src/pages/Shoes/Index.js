@@ -31,6 +31,9 @@ export default function Shoes() {
         <li>{shoe?.values.damping}</li>
         <li>{shoe?.values.traning}</li>
         <li>{shoe?.values.weight}</li>
+        <button>
+          <span>Comprar</span>
+        </button>
       </ul>
     );
   });

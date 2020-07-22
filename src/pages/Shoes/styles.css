@@ -3,6 +3,9 @@
     justify-content: center;
     text-align: center;
     flex-wrap: wrap-reverse;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
 
 }
 
@@ -75,17 +78,29 @@ li a:hover {
     padding: 50px;
     margin: 10px 10px;
     max-width: 400px;
-    /* background-color: #FAACA8;
-    background-image: linear-gradient(326deg, #FAACA8 0%, #DDD6F3 100%); */
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+    white-space: pre-wrap;
+}
 
+.Shoe-list Button {
+    background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+    background-color: #44c767;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 11px 58px;
+    text-decoration: none;
+    text-shadow: 24px 3px 36px #2f6627;
 }
 
 body {
-    background: #ADA996;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
 
 }
