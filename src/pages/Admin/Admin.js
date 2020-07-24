@@ -5,7 +5,7 @@ import './styles.css';
 import schema from '../../schema';
 export default function Admin() {
   function onSubmit(values, actions) {
-    firebase.firestore().collection('Shoes').add({ values });
+    firebase.firestore().collection('Teste 1234').add({ values });
   }
 
   return (

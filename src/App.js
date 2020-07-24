@@ -1,13 +1,13 @@
-import React from "react";
-import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
-import Header from "./components/Header/Index";
-import "./styles.css";
-import Admin from './pages/Admin/Admin'
-import Search from "./pages/Search/Index";
-import Shoes from "./pages/Shoes/Index"
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Index";
+import React from 'react';
+import './App.css';
+import { Switch, Route, Link } from 'react-router-dom';
+import Header from './components/Header/Index';
+import './styles.css';
+import Admin from './pages/Admin/Admin';
+import Search from './components/Search/index';
+import Shoes from './pages/Shoes/Index';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Index';
 
 function App() {
   return (
