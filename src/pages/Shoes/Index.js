@@ -36,7 +36,13 @@ export default function Shoes({ busca }) {
 
   useEffect(() => {
     setFilteredShoes(
-      tenis.filter((shoe) => shoe.values.drop.includes(busca.drop)),
+      tenis.filter(
+        (shoe) =>
+          shoe.values.drop.includes(busca.drop) &&
+          shoe.values.weight.includes(busca.weight) &&
+          shoe.values.damping.includes(busca.damping) &&
+          shoe.values.training.includes(busca.training),
+      ),
     );
   }, [busca]);
 
@@ -48,7 +54,6 @@ export default function Shoes({ busca }) {
   return (
     <div>
       <div className="Shoes-Container">
-        <input type="text" onChange={(e) => setSearch(e.target.value)} />
         {filteredShoes.map((shoe) => (
           <div>
             <ul className="Shoe-list">
@@ -69,7 +74,7 @@ export default function Shoes({ busca }) {
         <div></div>
       </div>
       <button onClick={() => console.log(busca, tenis, filteredShoes)}>
-        LOGA AQ TIO
+        LOGA AQ
       </button>
     </div>
   );

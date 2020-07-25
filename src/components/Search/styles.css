@@ -1,0 +1,15 @@
+.search-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-input-item {
+  padding: 10px;
+  margin: 50px auto;
+  align-items: center;
+  text-align: center;
+  border: 1px solid;
+  width: 150px;
+  height: 150px;
+
+}
