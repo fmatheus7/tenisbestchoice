@@ -1,25 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Firebase from '../../utils/Firebase';
-import { Context } from '../../Context';
 import './styles.css';
-import Search from '../../components/Search/index';
 
 export default function Shoes({ busca }) {
   const [tenis, setTenis] = useState([]);
   const [filteredShoes, setFilteredShoes] = useState([]);
-  const [searchValues, setSearchValues] = useState([]);
-  const [search, setSearch] = useState('');
-  const testando = '8';
-
-  // const shoesSearched = tenis.filter((shoe) => {
-  //   return shoe.values.drop.includes(busca.drop);
-  // });
-
-  // const shoesSearched = tenis.filter((shoe) => {
-  //   return (
-  //     shoe.values.drop.includes(busca), shoe.values.damping.includes(busca)
-  //   );
-  // });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +14,8 @@ export default function Shoes({ busca }) {
         .then((querySnapshot) => {
           const data = querySnapshot.docs.map((doc) => doc.data());
           setTenis(data);
-        });
+        })
+        .catch((err) => console.log(err));
     };
     fetchData();
   }, []);
@@ -45,11 +31,6 @@ export default function Shoes({ busca }) {
       ),
     );
   }, [busca]);
-
-  // const shoeList = tenis.map((shoe) => {
-  //   return (
-  //   );
-  // });
 
   return (
     <div>
@@ -79,6 +60,3 @@ export default function Shoes({ busca }) {
     </div>
   );
 }
-
-// vamos voltar a opção inicial de rendereizar os tenis como componente dentro da search page.
-// Desta forma podemos passar os paramentos de busca via props para o componente shoes e renderizar no nosso componente de search.

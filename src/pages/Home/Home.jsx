@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Card from '../../components/Card/Index';
 import firebase from '../../utils/Firebase';
 import './styles.css';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Welcome() {
   const imgurl = {
@@ -19,7 +19,7 @@ export default function Welcome() {
   const dropInfo =
     'É a diferença de altura entre a base do calcanhar e a planta do pé, ou seja, o "salto" do tênis. Quando menor, mais se parece com a pisada natural';
   const dampingInfo =
-    'Uma das principais características de um tênis para corrida é o seu poder de amortecimento. Porém, isso não determina se ele é bom ou ruim, apenas define em qual categoria ele se encontra. Por isso, é bom ter em mente outras características que realmente o fazem ser um tênis de amortecimento';
+    'Uma das principais características de um tênis para corrida é o seu poder de amortecimento. Porém, isso não determina se ele é bom ou ruim, apenas define em qual categoria ele se encontra. Por isso, é bom ter em mente outras características que realmente o fazem ser um tênis de amortecimentogit';
   const trainingInfo =
     'Os modelos são separados em 3 categorias: Corrida, Rodagem, Competição';
 

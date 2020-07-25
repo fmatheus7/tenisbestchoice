@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import firebase from '../../utils/Firebase';
 import './styles.css';
@@ -6,6 +6,7 @@ import schema from '../../schema';
 export default function Admin() {
   function onSubmit(values, actions) {
     firebase.firestore().collection('Teste 1234').add({ values });
+    alert('submetido com sucesso');
   }
 
   return (
@@ -37,7 +38,7 @@ export default function Admin() {
               />
               <ErrorMessage name="name " />
               <label htmlFor="drop">Tamanho do drop</label>
-              <Field as="select" name="drop" Required>
+              <Field as="select" name="drop" required>
                 <option value={4}>4</option>
                 <option value={6}>6</option>
                 <option value={8}>8</option>

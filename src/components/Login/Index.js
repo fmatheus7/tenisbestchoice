@@ -1,7 +1,5 @@
- 
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {Context} from "../../Context";
 import './styles.css';
 
 function initialState() {
@@ -18,7 +16,6 @@ function login({ user, password }) {
 const UserLogin = () => {
   const [values, setValues] = useState(initialState);
   const [error, setError] = useState(null);
-  const { setToken } = useContext(Context);
   const history = useHistory();
 
   function onChange(event) {
@@ -26,7 +23,7 @@ const UserLogin = () => {
 
     setValues({
       ...values,
-      [name]: value
+      [name]: value,
     });
   }
 
@@ -36,7 +33,6 @@ const UserLogin = () => {
     const { token, error } = login(values);
 
     if (token) {
-      
       return history.push('/AddItem');
     }
 
@@ -68,9 +64,7 @@ const UserLogin = () => {
             value={values.password}
           />
         </div>
-        {error && (
-          <div className="user-login__error">{error}</div>
-        )}
+        {error && <div className="user-login__error">{error}</div>}
         <button
           type="submit"
           theme="contained-green"
