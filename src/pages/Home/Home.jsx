@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import Card from '../../components/Card/Index';
+import CardHome from '../../components/Card/Index';
 import firebase from '../../utils/Firebase';
 import './styles.css';
 import { useHistory } from 'react-router-dom';
+import Grid from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 export default function Welcome() {
   const imgurl = {
     drop:
-      'https://blogfitness.com.br/wp-content/uploads/2017/01/drop-tenis.jpg',
+      'https://as2.ftcdn.net/jpg/03/08/32/01/500_F_308320176_OgvIVJN8dF7YT7Aoe9h4W9w8r1NYHrUV.jpg',
     damping:
-      'https://cdn.autodoc.de/uploads/custom-catalog/matd/categories/200x200/10111.png',
+      'https://as1.ftcdn.net/jpg/01/78/72/26/500_F_178722625_Vj9is6EuUBcX4xpJKUi3ad0XOU2HUYKq.jpg',
     traninig:
-      'https://blogeducacaofisica.com.br/wp-content/uploads/2018/03/competi%C3%A7%C3%A3o-capa.png',
+      'https://as2.ftcdn.net/jpg/01/71/13/25/500_F_171132502_LHSAGGBMvJ0LuaqKQwIsmDolEtWqr3u2.jpg',
   };
 
   const history = useHistory();
@@ -30,33 +33,50 @@ export default function Welcome() {
     return history.push('/Search');
   }
   return (
-    <div className="title">
-      <h1>Why choose us ?</h1>
-      <div className="wrapper">
-        <Card name="Drop" text={dropInfo} url={imgurl.drop} />
-        <Card name="Amortecimento" text={dampingInfo} url={imgurl.damping} />
-        <Card
-          name="Tipo de Treino"
-          text={trainingInfo}
-          url={imgurl.trainingInfo}
-        />
-      </div>
+    <Grid container spacing={4}>
+      <div className="title">
+        <h1>Why choose us ?</h1>
+        <div className="wrapper">
+          <Grid item xs={12} sm={6} md={4}>
+            <CardHome image={imgurl.drop} title="drop" text={dropInfo} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <CardHome
+              image={imgurl.damping}
+              title="damping"
+              text={dampingInfo}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <CardHome
+              image="https://as2.ftcdn.net/jpg/01/71/13/25/500_F_171132502_LHSAGGBMvJ0LuaqKQwIsmDolEtWqr3u2.jpg"
+              title="training"
+              text={trainingInfo}
+            />
+          </Grid>
+        </div>
+        <Grid container spacing={4}>
+          <Grid item>
+            <div className="subscription">
+              <h2>Start now!</h2>
+              <form onSubmit={onSubmit}>
+                <Input
+                  id="email-field"
+                  type="email"
+                  placeholder="Digite seu e-mail"
+                  name="email"
+                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                />
 
-      <div className="subscription">
-        <h2>Start now!</h2>
-        <form onSubmit={onSubmit}>
-          <input
-            type="email"
-            placeholder="Digite seu e-mail"
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <button type="submit" required>
-            Registrar
-          </button>
-        </form>
+                <Button type="submit" variant="contained" color="primary">
+                  Registrar
+                </Button>
+              </form>
+            </div>
+          </Grid>
+        </Grid>
       </div>
-    </div>
+    </Grid>
   );
 }
