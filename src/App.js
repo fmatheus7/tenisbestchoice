@@ -8,28 +8,31 @@ import Search from './components/Search/index';
 import Shoes from './pages/Shoes/Index';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Index';
+import Container from '@material-ui/core/Container';
 
 function App() {
   return (
     <div>
       <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home name="Matheus" />
-        </Route>
-        <Route path="/shoes">
-          <Shoes />
-        </Route>
-        <Route path="/AddItem">
-          <Admin />
-        </Route>
-        <Route path="/search">
-          <Search />
-        </Route>
-        <Route path="/UserLogin">
-          <Login />
-        </Route>
-      </Switch>
+      <Container maxWidth="lg" disableGutters>
+        <Switch>
+          <Route exact path="/">
+            <Home name="Matheus" />
+          </Route>
+          <Route path="/shoes">
+            <Shoes />
+          </Route>
+          <Route path="/AddItem">
+            <Admin />
+          </Route>
+          <Route path="/search">
+            <Search />
+          </Route>
+          <Route path="/UserLogin">
+            <Login />
+          </Route>
+        </Switch>
+      </Container>
     </div>
   );
 }

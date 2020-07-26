@@ -1,18 +1,34 @@
-import React from "react";
-import "./styles.css"
+import React from 'react';
+import './styles.css';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
-export default function Card({ url, name, text }) {
-    const image = { backgroundImage: `url(${url})` };
-    const cardClasses = url === null ? "card preloader" : "card";
-    return (
-      <div className={cardClasses}>
-        <div className="image">
-          <div style={image} />
-        </div>
-        <div className="text">
-          <h3>{name}</h3>
-          <p>{text}</p>
-        </div>
-      </div>
-    );
+export default function CardHome({ title, image, text }) {
+  return (
+    <div>
+      <Card>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt={title}
+            height="140"
+            image={image}
+            title={title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title.toUpperCase()}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {text}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </div>
+  );
 }
