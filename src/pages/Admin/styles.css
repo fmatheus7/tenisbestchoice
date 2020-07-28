@@ -1,47 +1,7 @@
-.admin-container {
-    align-items: center;
+.admin-tittle {
     text-align: center;
-
 }
 
-Input {
-    
-    display: flex;
-    background-color: #cc;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    border: 1px solid black;
-    height: 50px;
-    font-size: large;
-    position: relative;
-}
-
-input[type=submit] {
-
-    border: none;
-    background-color: whitesmoke;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30px;
-    text-align: center;
-    align-self: center;
-}
-
-select {
-    margin: 5px 5px;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1px;
+.admin-page button {
+    margin-top: 10px;
 }
