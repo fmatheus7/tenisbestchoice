@@ -1,100 +1,22 @@
-.Shoes-Container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap-reverse;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: auto;
-    text-align: center;
-
+.shoe-item img {
+  width: 15vh;
+  height: 15vh;
+  image-rendering: optimizeQuality;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
-    font-size: 1.3rem;
-    font-family: 'Montserrat', sans-serif;
+.shoe-item li {
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: center;
 }
 
-li {
-    border-bottom: 1px solid #ccccc;
-    padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+.shoe-item button {
+  justify-content: center;
+  align-self: center;
+  margin: 2px auto;
+  display: flex;
 }
 
-li:last-child {
-    border: none;
-}
-
-li a {
-    text-decoration: none;
-    color: #000;
-    display: block;
-    width: 200px;
-
-    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
-}
-
-li a:hover {
-    font-size: 30px;
-    background: #f6f6f6;
-}
-
-
-.Shoes-Container img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-    justify-content: left;
-}
-
-.Shoes-Container img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-.Shoe-list ul {
-    padding: 50px;
-    font-family: 'Bellota', cursive;
-    font-family: 'Playfair Display', serif;
-    font-size: large;
-}
-
-.Shoe-list {
-    border-bottom: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    width: 200px;
-    height: 350px;
-    border-radius: 5%;
-    flex-grow: 1;
-    padding: 50px;
-    margin: 10px 10px;
-    max-width: 400px;
-    background-color: whitesmoke;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    position: relative;
-    white-space: pre-wrap;
-}
-
-.Shoe-list Button {
-    background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
-    background-color: #44c767;
-    border-radius: 28px;
-    border: 1px solid #18ab29;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 17px;
-    padding: 11px 58px;
-    text-decoration: none;
-    text-shadow: 24px 3px 36px #2f6627;
+.shoe-item {
+  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.2);
 }
