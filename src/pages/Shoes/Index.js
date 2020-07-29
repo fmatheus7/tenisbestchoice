@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Firebase from '../../utils/Firebase';
-import "./styles.css";
+import './styles.css';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-
 
 export default function Shoes({ busca }) {
   const [tenis, setTenis] = useState([]);
