@@ -14,7 +14,7 @@ export default function CardHome({ title, image, text }) {
       <Card raised className="fullCard">
         <CardActionArea>
           {/* <CardMedia component="img" alt={title} image={image} title={title} /> */}
-          <Avatar alt={title} src={image} />
+          <Avatar alt={title} src={image} className="card-avatar" />
           <CardContent>
             <Typography
               gutterBottom

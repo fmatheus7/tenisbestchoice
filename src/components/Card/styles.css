@@ -1,3 +1,11 @@
 .fullCard {
     max-width: 345px;
+    margin: 5px 5px;
+}
+
+.card-avatar {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    margin: 5px auto;
 }

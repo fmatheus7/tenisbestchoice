@@ -39,10 +39,14 @@ export default function Welcome() {
       </div>
       <div className="card-Container">
         <CardHome image={imgurl.drop} title="drop" text={dropInfo} />
-        <CardHome image={imgurl.damping} title="damping" text={dampingInfo} />
+        <CardHome
+          image={imgurl.damping}
+          title="Amortecimento"
+          text={dampingInfo}
+        />
         <CardHome
           image="https://as2.ftcdn.net/jpg/01/71/13/25/500_F_171132502_LHSAGGBMvJ0LuaqKQwIsmDolEtWqr3u2.jpg"
-          title="training"
+          title="Tipo de Treino"
           text={trainingInfo}
         />
       </div>
