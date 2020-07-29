@@ -12,6 +12,23 @@
 
 ### ✨ [Demo](https://tenisbestchoice.vercel.app/)
 
+## Tools used
+
+- React:
+  React hooks:
+  useEffect, useState, useMemo
+- React Router Dom:
+  Swtich
+  Link
+  useHistory
+  Route
+- Formik
+- Material UI
+- Axios
+- React Select
+- Firebase:
+  Used as DB to added the shoes list.
+
 ## Install
 
 ```sh
