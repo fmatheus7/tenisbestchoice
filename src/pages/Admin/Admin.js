@@ -22,7 +22,7 @@ export default function Admin() {
       <div className="admin-tittle">
         <Typography variant="h3">Adicionar Tênis ao banco de dados</Typography>
         <br />
-        <Typography variant="h4">informação do tênis</Typography>
+        <Typography variant="h4">Informações do Tênis</Typography>
       </div>
       <Grid
         container
