@@ -33,50 +33,35 @@ export default function Welcome() {
     return history.push('/Search');
   }
   return (
-    <Grid container spacing={4}>
+    <div className="home-Container">
       <div className="title">
         <h1>Why choose us ?</h1>
-        <div className="wrapper">
-          <Grid item xs={12} sm={6} md={4}>
-            <CardHome image={imgurl.drop} title="drop" text={dropInfo} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <CardHome
-              image={imgurl.damping}
-              title="damping"
-              text={dampingInfo}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <CardHome
-              image="https://as2.ftcdn.net/jpg/01/71/13/25/500_F_171132502_LHSAGGBMvJ0LuaqKQwIsmDolEtWqr3u2.jpg"
-              title="training"
-              text={trainingInfo}
-            />
-          </Grid>
-        </div>
-        <Grid container spacing={4}>
-          <Grid item>
-            <div className="subscription">
-              <h2>Start now!</h2>
-              <form onSubmit={onSubmit}>
-                <Input
-                  id="email-field"
-                  type="email"
-                  placeholder="Digite seu e-mail"
-                  name="email"
-                  required
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-
-                <Button type="submit" variant="contained" color="primary">
-                  Registrar
-                </Button>
-              </form>
-            </div>
-          </Grid>
-        </Grid>
       </div>
-    </Grid>
+      <div className="card-Container">
+        <CardHome image={imgurl.drop} title="drop" text={dropInfo} />
+        <CardHome image={imgurl.damping} title="damping" text={dampingInfo} />
+        <CardHome
+          image="https://as2.ftcdn.net/jpg/01/71/13/25/500_F_171132502_LHSAGGBMvJ0LuaqKQwIsmDolEtWqr3u2.jpg"
+          title="training"
+          text={trainingInfo}
+        />
+      </div>
+      <div className="subscription">
+        <h2>Start now!</h2>
+        <form onSubmit={onSubmit}>
+          <Input
+            id="email-field"
+            type="email"
+            placeholder="Digite seu e-mail"
+            name="email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Button type="submit" variant="contained" color="primary">
+            Registrar
+          </Button>
+        </form>
+      </div>
+    </div>
   );
 }
