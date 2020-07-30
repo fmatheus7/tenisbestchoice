@@ -7,6 +7,9 @@
 </p>
 
 > this project was created with the intention of helping amateur runners to choose the best shoes according to the desired characteristics.
+### Preview
+
+  <img src="https://github.com/fmatheus7/tenisbestchoice/blob/master/projectPreview.gif">
 
 ### 🏠 [Homepage](https://tenisbestchoice.vercel.app/)
 
