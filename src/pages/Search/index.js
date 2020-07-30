@@ -9,7 +9,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-import Paper from '@material-ui/core/Paper';
+import PopOver from '../../components/PopOver/index';
 
 export default function Search() {
   // Tab from Material-UI
@@ -43,7 +43,12 @@ export default function Search() {
       'aria-controls': `simple-tabpanel-${index}`,
     };
   }
-
+  // popup information
+  const dampingInfo =
+    'A escolha do amortecimento é pessoal. Então, tanto faz ser mais rígido ou macio. Só não esqueça que seu corpo tem um papel importante na redução no impacto.';
+  const dropInfo = 'informações sobre drop';
+  const weightInfo = 'informações sobre peso';
+  const trainingInfo = 'informações sobre tipos de treino';
   // Hooks
   const [shoePreferences, setShoePreferences] = useState({
     drop: '',
@@ -59,6 +64,7 @@ export default function Search() {
     });
     console.log(shoePreferences);
   }
+
   // Page
 
   return (
@@ -88,6 +94,7 @@ export default function Search() {
           <MenuItem value={'soft'}>Suave</MenuItem>
           <MenuItem value={'extra-soft'}>Extra suave</MenuItem>
         </Select>
+        <PopOver info={dampingInfo} type="Amortecimento" />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Select name="drop" onChange={onChange} className="select-item">
@@ -97,6 +104,7 @@ export default function Search() {
           <MenuItem value={10}>10</MenuItem>
           <MenuItem value={12}>12</MenuItem>
         </Select>
+        <PopOver info={dropInfo} type="Drop" />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Select name="weight" onChange={onChange} className="select-item">
@@ -104,6 +112,7 @@ export default function Search() {
           <MenuItem value={'medium'}>Medio</MenuItem>
           <MenuItem value={'light'}>Leve</MenuItem>
         </Select>
+        <PopOver info={weightInfo} type="Peso" />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Select name="training" onChange={onChange} className="select-item">
@@ -111,6 +120,7 @@ export default function Search() {
           <MenuItem value={'shooting'}>Rodagem</MenuItem>
           <MenuItem value={'competition'}>Competição</MenuItem>
         </Select>
+        <PopOver info={trainingInfo} type="Tipo de treino" />
       </TabPanel>
       <Typography variant="h5">Suas caracteristicas selecionadas</Typography>
       <Typography variant="overline">{`Amortecimento = ${
